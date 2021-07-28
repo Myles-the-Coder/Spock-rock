@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: whitesmoke;
+  font-family: "Noto Sans JP", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin: 0;
+  height: 100vh;
+  transition: transform 0.5s ease-in-out;
+}
+
+body.show-rules {
+  transform: translateX(30rem);
+}
+
+.fa-bars, .fa-times {
+  font-size: 4rem;
+  position: absolute;
+  top: .5rem;
+  left: .5rem;
+  background-color: #306eff;
+  color: #fff;
+  padding: 1rem;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.rules-container {
+  color: #fff;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #306eff;
+  height: 100vh;
+  width: 30rem;
+  transform: translateX(-100%);
+}
+
+.rules-container p {
+  font-size: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.rules-container h3 {
+  font-size: 3rem;
+  margin: 1rem 0;
+}
+
+.rules-container ul {
+  list-style-type: none;
+  line-height: 4rem;
+  padding: 0;
+  margin: 0;
+  background-color: rgba(0, 0, 0, 0.1);
+  margin: 1rem;
+  border-radius: 1rem;
+}
+
+.rules-container ul p {
+  font-size: 2rem;
+  border-bottom: 1px solid #fff;
+  margin: 0;
+}
+
+.rules-container li {
+  font-size: 1.5rem;
+}
+
+.rules-container
+
+.game-container {
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  width: 500px;
+  height: 600px;
+  border-radius: 1rem;
+}
+
+.container-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #306eff;
+  color: #fff;
+  border-top-right-radius: 1rem;
+  border-top-left-radius: 1rem;
+  max-width: 100%;
+  padding: 2rem;
+}
+
+.container-body h6 {
+  font-size: 2.5rem;
+  margin: 1rem;
+}
+
+.icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 6rem;
+  margin: 7rem 0;
+}
+
+.icon-container i {
+  margin: 0 2rem;
+}
+
+.icon-container.player i {
+  cursor: pointer;
+}
+
+.icon-container.player i.selected,
+.icon-container.computer i.selected {
+  color: #000;
+}
+
+.icon-container.icon-container.player i:hover {
+  transform: scale(1.4);
+  transition: transform 0.2s ease;
+}
+
+.icon-container.player i {
+  color: #306eff;
+}
+
+.icon-container.computer i {
+  color:#ff0000;
+}
+
+.fa-sync-alt {
+  cursor: pointer;
+  font-size: 3rem;
+  color: #fff;
+}
+
+.fa-sync-alt:hover {
+  animation: rotate 0.5s linear;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.message {
+  font-size: 3rem;
+  text-align: center;
+  margin: -3rem 0;
+}
+
+@media screen and (max-width:600px) {
+  .game-container {
+    width: 90vw;
+    overflow: hidden;
+  }
+
+  .icon-container {
+    font-size: 5rem;
+  }
+
+  .fa-bars {
+    font-size: 3rem;
+  }
+}
